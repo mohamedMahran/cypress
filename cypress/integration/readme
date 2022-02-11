@@ -1,0 +1,7 @@
+1- To run the docker please run the following command in the terminal 
+
+docker run --ipc=host -t cypress/included:9.4.1 .
+
+2- To run the tests inside the docker image to generate awesome reports after running the first command please run the following command
+
+docker-compose up

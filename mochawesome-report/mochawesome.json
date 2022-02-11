@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-11T16:16:31.195Z",
+    "end": "2022-02-11T16:17:00.189Z",
+    "duration": 28994,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a30468c1-2265-4f31-ad9b-8befe249031a",
+      "title": "",
+      "fullFile": "cypress/integration/loginTests.spec.js",
+      "file": "cypress/integration/loginTests.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c86d42a-b1d5-48c3-ac53-e7a9e25b10f1",
+          "title": "Our Test scenarios scripts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "5082f681-29b5-44a2-a1d9-ada887674a03",
+              "title": "Given I navigated to bynder",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "When I login with valid username and password",
+                  "fullTitle": "Our Test scenarios scripts Given I navigated to bynder When I login with valid username and password",
+                  "timedOut": null,
+                  "duration": 19184,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_loginPage.onLoginPage.signIn(userDetails.username, userDetails.password);",
+                  "err": {},
+                  "uuid": "22a6e44e-ec44-45b4-a546-eb645a40d7f7",
+                  "parentUUID": "5082f681-29b5-44a2-a1d9-ada887674a03",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Then I verify that redirected to the dashboard page",
+                  "fullTitle": "Our Test scenarios scripts Given I navigated to bynder Then I verify that redirected to the dashboard page",
+                  "timedOut": null,
+                  "duration": 730,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.url().should('include', '/account/dashboard');",
+                  "err": {},
+                  "uuid": "eefd3a8e-ea0c-4650-9a52-7b989c92da29",
+                  "parentUUID": "5082f681-29b5-44a2-a1d9-ada887674a03",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I click on the profile dropdown to log out",
+                  "fullTitle": "Our Test scenarios scripts Given I navigated to bynder When I click on the profile dropdown to log out",
+                  "timedOut": null,
+                  "duration": 4856,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_adminBar.onNavBar.hoverOnProfileDropDown();\n_adminBar.onNavBar.logOut();",
+                  "err": {},
+                  "uuid": "1f3d871d-c348-4178-b7fc-ee321db7cbf8",
+                  "parentUUID": "5082f681-29b5-44a2-a1d9-ada887674a03",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Then I verify that redirected to the login page",
+                  "fullTitle": "Our Test scenarios scripts Given I navigated to bynder Then I verify that redirected to the login page",
+                  "timedOut": null,
+                  "duration": 73,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.url().should('include', '/login');",
+                  "err": {},
+                  "uuid": "d364cb1e-e24c-4a11-a56f-5e647db39aa5",
+                  "parentUUID": "5082f681-29b5-44a2-a1d9-ada887674a03",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "When I login with non-exsting username and password",
+                  "fullTitle": "Our Test scenarios scripts Given I navigated to bynder When I login with non-exsting username and password",
+                  "timedOut": null,
+                  "duration": 3612,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let r = (Math.random() + 1).toString(36).substring(7);\ncy.reload();\n_loginPage.onLoginPage.signIn(r, r);",
+                  "err": {},
+                  "uuid": "8d399ccb-41bf-4e07-af70-96c686f9ce49",
+                  "parentUUID": "5082f681-29b5-44a2-a1d9-ada887674a03",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Then I verify that error message has displayed",
+                  "fullTitle": "Our Test scenarios scripts Given I navigated to bynder Then I verify that error message has displayed",
+                  "timedOut": null,
+                  "duration": 129,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//cy.get('.cbox_messagebox').should('have.text', 'You have entered an incorrect username or password.')\ncy.contains('.cbox_messagebox', 'You have entered an incorrect username or password.');",
+                  "err": {},
+                  "uuid": "f7f58a23-1b9b-48cf-894d-5dfabd1d4c74",
+                  "parentUUID": "5082f681-29b5-44a2-a1d9-ada887674a03",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "22a6e44e-ec44-45b4-a546-eb645a40d7f7",
+                "eefd3a8e-ea0c-4650-9a52-7b989c92da29",
+                "1f3d871d-c348-4178-b7fc-ee321db7cbf8",
+                "d364cb1e-e24c-4a11-a56f-5e647db39aa5",
+                "8d399ccb-41bf-4e07-af70-96c686f9ce49",
+                "f7f58a23-1b9b-48cf-894d-5dfabd1d4c74"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 28584,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}

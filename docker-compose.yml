@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  Test:
+    image: cypress_compose
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./dockerReports:/app/cypress/results
+      - ./dockerReports:/app/cypress/mochawesome-report
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
