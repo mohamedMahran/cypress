@@ -17,7 +17,9 @@
 6. Also, I added POM ( Page object modal ) into our project to make the project more reusable and manitainable 
 
 # To Build and Run Docker file
+
 *1.* docker build -t cypress/included:9.4.1 .
+
 *2.* docker run --ipc=host -t cypress/included:9.4.1 .
 
 
