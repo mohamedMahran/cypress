@@ -16,6 +16,12 @@
 
 6. Also, I added POM ( Page object modal ) into our project to make the project more reusable and manitainable 
 
+
+# Reports
+1. Created by mochawesome package  
+![image](https://user-images.githubusercontent.com/20645322/153772159-cef177a8-5ba8-475b-8acc-d9db46b775ff.png)
+  
+
 # To Build and Run Docker file
 
 *1.* docker build -t cypress/included:9.4.1 .
