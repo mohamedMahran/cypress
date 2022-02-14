@@ -4,8 +4,9 @@ export class adminBar
     {
         cy.get('a[class*="admin-dropdown profile"]').trigger('mouseover')
     }
-   logOut(){
-    cy.get('i.fa.fa-power-off').click({ force: true })
+   logOut()
+   {
+        cy.get('i.fa.fa-power-off').click({ force: true })
    }
  
 }

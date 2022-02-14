@@ -1,6 +1,7 @@
 ///<reference types='cypress' />
-import { loginPage, onLoginPage } from "../support/page_objects/loginPage.js"
-import { adminBar, onNavBar } from "../support/page_objects/adminBar.js";
+
+import { onLoginPage } from "../support/page_objects/loginPage.js"
+import { onNavBar } from "../support/page_objects/adminBar.js";
 describe('Our Test scenarios scripts', () => {
     describe('Given I navigated to bynder', () => {
         let userDetails;
@@ -13,7 +14,6 @@ describe('Our Test scenarios scripts', () => {
 
         it('When I login with valid username and password', () => {
             onLoginPage.signIn(userDetails.username, userDetails.password)
-
         })
 
         it('Then I verify that redirected to the dashboard page', () => {
@@ -40,5 +40,15 @@ describe('Our Test scenarios scripts', () => {
             //cy.get('.cbox_messagebox').should('have.text', 'You have entered an incorrect username or password.')
             cy.contains('.cbox_messagebox', 'You have entered an incorrect username or password.') 
         })
+        it('And I verify that error message on the notification header',()=>{
+            cy.contains('div.notification h1', 'You have entered an incorrect username or password.'); 
+        });
+        it('And I verify that verify error message disappeared after few seconds',()=>
+        {
+            /* wait for 25 seconds to ensure that the notification has disappeared */
+            cy.get("div.notification h1").should('be.visible');
+            cy.wait(25000);
+            cy.get("div.notification h1").should('not.be.visible');
+        });
     })
 })

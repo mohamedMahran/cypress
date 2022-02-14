@@ -15,6 +15,9 @@
 5. Adding random function to generate random user name and password to validate the invalid login scenario 
 
 6. Also, I added POM ( Page object modal ) into our project to make the project more reusable and manitainable 
+7. Finally i added two following extra checks related to the login scenario which should be verified
+  *7.1* verify error message on the notification header
+  *7.2* verify error message disappeared after few seconds
 
 # To Build and Run Docker file
 *1.* docker build -t cypress/included:9.4.1 .
