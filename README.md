@@ -27,7 +27,15 @@
       *7.1* verify error message on the notification header
   
       *7.2* verify error message disappeared after few seconds
-
+# Install 
+  1. Install all the packages -> npm install
+# Run tests
+  1. Run tests against chrome browser -> npx cypress open --browser chrome --config integrationFolder=CYPRESS ASSIGMENTS/cypress/integration/loginTests.spec.js
+  
+        1.1 if you want to change the browser, please rename the browser on the above mentiond command
+        
+        1.2 if you want to run tests headless with genreating mocha report please run the following command
+                -> ./node_modules/.bin/cypress run --reporter mochawesome
 
 # Reports
 1. Created by mochawesome package  
