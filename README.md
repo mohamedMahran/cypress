@@ -30,11 +30,13 @@
 # Install 
   1. Install all the packages -> npm install
 # Run tests
-  1. Run tests against chrome browser -> npx cypress open --browser chrome --config integrationFolder=CYPRESS ASSIGMENTS/cypress/integration/loginTests.spec.js
-  
-        1.1 if you want to change the browser, please change the browser to edge or firefox on the above mentiond command
+  1. Run tests against chrome browser, Please run the below command 
+       
+                ->  npx cypress open --browser chrome --config integrationFolder=CYPRESS ASSIGMENTS/cypress/integration/loginTests.spec.js
+
+  2. if you want to change the browser, please change the browser to edge or firefox on the above mentiond command
         
-        1.2 if you want to run tests headless with genreating mocha report please run the following command
+  3. if you want to run tests headless with genreating mocha report please run the following command
         
                 -> ./node_modules/.bin/cypress run --reporter mochawesome
 
