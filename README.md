@@ -36,6 +36,7 @@
   
 
 # To Build and Run Docker file
+If you want to use docker then build the docker image
 
 *1.* docker build -t cypress/included:9.4.1 .
 
